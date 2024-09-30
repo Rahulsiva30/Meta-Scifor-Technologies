@@ -1,0 +1,32 @@
+<h1>Hello fill up this Form!</h1>
+
+<form action="">
+  <table>
+    <tr>
+      <td>{{ form.Uname.label }}</td>
+      <td>{{ form.Uname() }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.Upassword.label }}</td>
+      <td>{{ form.Upassword() }}</td>
+    </tr>
+    <tr>
+      <td>{{ form.Ugender.label }}</td>
+      <td>{{ form.Ugender() }}</td>
+    </tr>
+
+    <tr>
+      <td>{{ form.Udob.label }}</td>
+      <td>{{ form.Udob(type="date") }}</td>
+    </tr>
+
+    <tr>
+      <td>{{ form.Uphone.label }}</td>
+      <td>{{ form.Uphone() }}</td>
+    </tr>
+
+    <tr>
+      <td><button type="submit">submit</button></td>
+    </tr>
+  </table>
+</form>
