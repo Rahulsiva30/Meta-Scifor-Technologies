@@ -1,0 +1,87 @@
+1: What is Object-Oriented Programming (OOP) and why is it used?
+ans:In Python, object-oriented Programming (OOPs) is a programming paradigm that uses objects and classes in programming. It aims to implement real-world entities like inheritance, polymorphisms, encapsulation, etc. in the programming
+
+2: What is a class in Python?
+ans: A class is a template definition of the methods and variables in a particular kind of object. Thus, an object is a specific instance of a class; it contains real values instead of variables.
+
+3: Explain the concepts of  inheritance, and polymorphism in OOP.
+ans:Inheritance is essentially making a class, and then having other classes in your program get their feature form the already existing base class. However, polymorphism is an interface, and because of being an interface, it can take different shapes and forms.
+
+4: How do you create an instance of a class in Python?
+ans:To create instances of a class, you call the class using class name and pass in whatever arguments its __init__ method accepts
+
+5:What is the purpose of __ init __ method in Python?
+ans:In Python, __init__ is an instance method that initializes a newly created object. It takes the object as its first argument followed by additional arguments
+
+6: How does method overriding work in Python?
+ans:Method overriding allows you to redefine a method in a subclass or the derived class previously defined in its parent or the superclass.
+
+7: How do you implement method overloading in Python?
+ans: Method Overloading is achieved by defining multiple methods with the same name within a class but with different parameter lists or using the *args and **kwargs syntax.
+
+8: How does Python support multiple inheritance?
+ans:In Python, not only can we derive a class from the superclass but you can also derive a class from the derived class. This form of inheritance is known as multilevel inheritance.
+
+9: Define a base class Animal with attributes name and sound. Create a derived class Dog that inherits from Animal and has an additional method to display the dog's breed.
+ans:
+class animal:
+    def __init__(self, name, sound):
+        self.name = name
+        self.sound = sound
+
+
+class dog(animal):
+    def __init__(self, name, sound, breed):
+        super().__init__(name, sound)
+        self.breed = breed
+
+    def display(self):
+        print(f"name:{self.name}\nsound:{self.sound}\nbreed:{self.breed}")
+
+
+d = dog("spike", "bark", "bulldog")
+d.display()
+
+
+10: Define a base class Shape with a method area. Create derived classes Circle and Rectangle that implement the area method differently.
+ans:
+class Shape:
+    def area(self):
+        pass
+
+
+class Circle(Shape):
+    def area(self, r):
+        return 3.14 * r * r
+
+
+class Rectangle(Shape):
+    def area(self, l, b):
+        return l * b
+
+
+c = Circle()
+print(c.area(10))
+r = Rectangle()
+print(r.area(10, 15))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
